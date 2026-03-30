@@ -1,4 +1,4 @@
-﻿# Specific Test VII: Physics-Guided ML
+# Specific Test VII: Physics-Guided ML
 
 This folder contains my physics-informed solution for the three-class lens classification task.
 
@@ -55,5 +55,8 @@ The notebook also plots ROC curves for the final evaluation.
 ## Notes
 
 - The physics-informed branch is the central difference from the common-task baseline.
-- If you are viewing the GitHub copy of this repository, the local checkpoint file may be missing because large model files were not guaranteed to be included in the pushed mirror. You can download it here: <https://drive.google.com/file/d/1DK-f1eRkcZxUe6KEeewP5K--mECwXyyi/view>.
+- The physics-informed transformer module and inverse-lensing encoder were adapted from work by [Lucas Veloso](https://medium.com/@lucas.jose.veloso.de.souza/lensiformer-a-relativistic-physics-informed-vision-transformer-architecture-for-dark-matter-a119f6d0dc0d). Specifically, those parts were adapted from the [Lensiformer GitHub repository](https://github.com/ML4SCI/DeepLense/tree/main/Physics_Informed_Transformers_For_Dark-Matter_Morphology_Lucas_Jose).
+- The file size of the trained model were too large to push on Github. You can download it here: <https://drive.google.com/file/d/1DK-f1eRkcZxUe6KEeewP5K--mECwXyyi/view>.
+
+
 
