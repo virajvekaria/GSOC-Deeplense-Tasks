@@ -12,7 +12,7 @@ Most tasks are implemented in **PyTorch** and documented through task-specific J
 |------|--------|-----------|-------|----------------|
 | I | `Common task/` | `task_common.ipynb` | Multi-Class Classification | ResNet-18 |
 | II | `Test 2/` | external fork + `deeplense_agent` package | Agentic AI | Pydantic AI + DeepLenseSim tools |
-| V | `Test 5/` | `task_5.ipynb` | Lens Finding & Data Pipelines | Custom CNN + Spatial Attention |
+| V | `Test 5/` | `task_5.ipynb` | Lens Finding & Data Pipelines | EfficientNet-B0 + hard-negative mining |
 | VI.A | `Test 6/` | `task_6a.ipynb` | Super-Resolution (Synthetic) | RCAN |
 | VI.B | `Test 6/` | `task_6b.ipynb` | Super-Resolution (Real Pairs) | Augmented / Fine-tuned RCAN |
 | VII | `Test 7/` | `task_7.ipynb` | Physics-Guided Classification | PhysicsInformedFusionNet + EfficientNet-B0 |
@@ -55,10 +55,10 @@ Most tasks are implemented in **PyTorch** and documented through task-specific J
 ## Task V - Lens Finding & Data Pipelines
 
 - **Objective:** Binary classification of lens versus non-lens observations under heavy class imbalance.
-- **Architecture:** Custom CNN with a `SpatialAttention` block.
+- **Architecture:** pretrained `EfficientNet-B0` with a custom binary classifier head.
 - **Training Strategy:** focal loss, hard-negative mining, and a second-stage fine-tuning "bootcamp".
 - **Inference Strategy:** test-time augmentation over flips and rotation.
-- **Reported Result:** best reported test AUC `0.9895` after hard-negative fine-tuning and TTA, with macro F1 `0.75`.
+- **Reported Result:** best reported test AUC `0.9931` after hard-negative fine-tuning and TTA, with macro F1 `0.83`.
 
 ---
 
@@ -104,7 +104,7 @@ Most tasks are implemented in **PyTorch** and documented through task-specific J
 |------|---------|----------------------|
 | I | Accuracy / Macro F1 | `0.95 / 0.95` |
 | II | Structured run output | sample run + metadata produced |
-| V | AUC / Macro F1 | `0.9895 / 0.75` |
+| V | AUC / Macro F1 | `0.9931 / 0.83` |
 | VI.A | PSNR / SSIM | `42.32 / 0.9745` |
 | VI.B | PSNR / SSIM | `29.95 / 0.8217` |
 | VII | Mean AUC | `0.9933` |
