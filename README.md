@@ -58,7 +58,7 @@ Most tasks are implemented in **PyTorch** and documented through task-specific J
 - **Architecture:** Custom CNN with a `SpatialAttention` block.
 - **Training Strategy:** focal loss, hard-negative mining, and a second-stage fine-tuning "bootcamp".
 - **Inference Strategy:** test-time augmentation over flips and rotation.
-- **Reported Result:** best reported test AUC `0.9650` after fine-tuning and TTA.
+- **Reported Result:** best reported test AUC `0.9895` after hard-negative fine-tuning and TTA, with macro F1 `0.75`.
 
 ---
 
@@ -104,7 +104,7 @@ Most tasks are implemented in **PyTorch** and documented through task-specific J
 |------|---------|----------------------|
 | I | Accuracy / Macro F1 | `0.95 / 0.95` |
 | II | Structured run output | sample run + metadata produced |
-| V | AUC | `0.9650` |
+| V | AUC / Macro F1 | `0.9895 / 0.75` |
 | VI.A | PSNR / SSIM | `42.32 / 0.9745` |
 | VI.B | PSNR / SSIM | `29.95 / 0.8217` |
 | VII | Mean AUC | `0.9933` |
